@@ -13,7 +13,7 @@ LRESULT CALLBACK WindowProc(
     WPARAM wParam,
     LPARAM lParam)
 {
-    const auto* window_data = reinterpret_cast<WindowData*>(GetWindowLongPtr(hwnd, 0));
+    const auto* window_data = reinterpret_cast<WindowData*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
 
     switch (uMsg)
     {
